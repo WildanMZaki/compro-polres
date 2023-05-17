@@ -58,35 +58,78 @@
           </a>
         </div>
     </header>
-    <main class="container">
+    <!-- <main class="container"> -->
     
-        <section id="hero" class="my-3 d-flex flex-column align-items-center">
+        <section id="hero" class="my-3 d-flex flex-column align-items-center">            
             <i>Lorem ipsum dolor sit amet.</i>
             <img src="./assets/blogo.png" alt="">
-            <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis molestiae deserunt ad asperiores totam provident!</p>
+            <div class="w-100 px-3">
+                <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis molestiae deserunt ad asperiores totam provident!</p>
+            </div>
         </section>
         
         <section id="satker" class="mb-3">
             <div class="label">
-                <h3>Satuan Kerja</h3>
+                <h4 class="bg-secondary py-3 px-5 text-white">Satuan Kerja</h4>
             </div>
     
         </section>
         
         <section id="layanan">
             <div class="label">
-                <h3>Layanan</h3>
+                <h4 class="bg-secondary py-3 px-5 text-white">Layanan</h4>
             </div>
-            <div class="layanan">
-                <ion-icon name="card-outline"></ion-icon>
+            <div class="container">
+                <div class="layanan row">
+                    <div class="col-3 p-lg-3 p-1">
+                        <div class="border shadow py-3">
+                            <div class="d-flex justify-content-center">
+                                <i class="bx bx-id-card fs-1"></i>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <p class="m-0 p-0">SIM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 p-lg-3 p-1">
+                        <div class="border shadow py-3">
+                            <div class="d-flex justify-content-center">
+                                <i class="bx bx-file fs-1"></i>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <p class="m-0 p-0">SKCK</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 p-lg-3 p-1">
+                        <div class="border shadow py-3">
+                            <div class="d-flex justify-content-center">
+                                <i class="bx bx-car fs-1"></i>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <p class="m-0 p-0">STNK</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 p-lg-3 p-1">
+                        <div class="border shadow py-3">
+                            <div class="d-flex justify-content-center">
+                                <i class="bx bx-traffic-cone fs-1"></i>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <p class="m-0 p-0">E-Tilang</p>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
             </div>
         </section>
 
-    </main>
+    <!-- </main> -->
 
     <footer class="w-100 bg-secondary">
         <nav class="w-100">
-            <ul class="list-unstyled d-flex w-100 justify-content-center m-0">
+            <ul class="list-unstyled d-flex w-100 justify-content-around my-3">
                 <li class="active">
                     <a href="#" class="nav-link">
                         <i class='bx bx-home'></i>
@@ -121,6 +164,8 @@
         </nav>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
