@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLRES Subang</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #hero {
+            min-height: 40vh;
+        }
+        li {            
+            transition: all .55s ease;
+        }
+        li:hover {
+            border-bottom: 5px solid rgb(136, 211, 236);
+        }
+        li.active {
+            border-bottom: 5px solid rgb(1, 191, 255);
+        }
+        .nav-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+        .nav-link:hover {
+            color: whitesmoke;
+        }
+        footer { display: none; }
+        @media (max-width: 660px) {
+            footer { 
+                display: block; 
+                position: fixed;
+                bottom: 0;                
+            }            
+            #layanan {
+                margin-bottom: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="navbar navbar-dark bg-secondary">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="./assets/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+            <p class="d-inline m-0 p-0 ms-4">Header</p>
+          </a>
+        </div>
+    </header>
+    <main class="container">
+    
+        <section id="hero" class="my-3 d-flex flex-column align-items-center">
+            <i>Lorem ipsum dolor sit amet.</i>
+            <img src="./assets/blogo.png" alt="">
+            <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis molestiae deserunt ad asperiores totam provident!</p>
+        </section>
+        
+        <section id="satker" class="mb-3">
+            <div class="label">
+                <h3>Satuan Kerja</h3>
+            </div>
+    
+        </section>
+        
+        <section id="layanan">
+            <div class="label">
+                <h3>Layanan</h3>
+            </div>
+            <div class="layanan">
+                <ion-icon name="card-outline"></ion-icon>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="w-100 bg-secondary">
+        <nav class="w-100">
+            <ul class="list-unstyled d-flex w-100 justify-content-center m-0">
+                <li class="active">
+                    <a href="#" class="nav-link">
+                        <i class='bx bx-home'></i>
+                        <small>Home</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <i class='bx bx-group'></i>
+                        <small>Satker</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <i class='bx bx-news'></i>
+                        <small>Berita</small>
+                    </a>
+                </li>                
+                <li>
+                    <a href="#" class="nav-link">
+                        <i class='bx bxs-dashboard'></i>
+                        <small>Layanan</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <i class='bx bxs-user'></i>
+                        <small>Profile</small>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
