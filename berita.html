@@ -14,14 +14,20 @@
             margin: 0;
             padding: 0;
         }
-        .semua-satker {
+        .semua-berita {
             display: flex;
             width: 100%;
             flex-wrap: wrap;
-
+            justify-content: space-around;
         }
-        .semua-satker .satker {
+        .semua-berita .berita {
+            flex-basis: 23%;
+        }
+        .gbr-berita {
             flex-basis: 25%;
+        }
+        .info-berita {
+            flex-basis: 75%;
         }
         footer li {            
             transition: all .55s ease;
@@ -50,8 +56,11 @@
                 position: fixed;
                 bottom: 0;                
             }            
-            main.semua-satker {
+            main.semua-berita {
                 margin-bottom: 80px;
+            }
+            .semua-berita .berita {
+                flex-basis: 100%;
             }
         }
     </style>
@@ -62,7 +71,7 @@
         <div class="container-fluid d-flex align-items-center">
           <a class="navbar-brand d-flex align-items-center" href="#">
             <img src="./assets/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
-            <p class="d-inline m-0 p-0 ms-4">Satuan Kerja</p>
+            <p class="d-inline m-0 p-0 ms-4">Berita</p>
           </a>          
           <div class="w-50 m-0 header-nav">
             <ul class="d-flex list-unstyled ms-auto text-white justify-content-around m-0">
@@ -96,65 +105,41 @@
         </div>
     </header>
 
-    <main class="container semua-satker mt-3">
-        <div class="p-lg-3 p-1 satker">
-            <div class="satker border shadow py-3 rounded-3">
-                <div class="d-flex justify-content-center">
-                    <img src="./assets/logo.png" alt="logo" class="img-fluid">
-                </div>
-                <div class="d-flex justify-content-center">
-                    <small class="m-0 p-0">HUMAS</small>
-                </div>
+    <main class="container semua-berita mt-3">
+        <div class="berita border shadow rounded-3 d-flex p-3">
+            <div class="gbr-berita me-3">
+                <img src="./assets/logo.jpg" alt="Logo berita" class="img-fluid">
+            </div>
+            <div class="info-berita">
+                <h5>Judul</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
         </div>
-        <div class="p-lg-3 p-1 satker">
-            <div class="satker border shadow py-3 rounded-3">
-                <div class="d-flex justify-content-center">
-                    <img src="./assets/logo.png" alt="logo" class="img-fluid">
-                </div>
-                <div class="d-flex justify-content-center">
-                    <small class="m-0 p-0">SDM</small>
-                </div>
+        <div class="berita border shadow rounded-3 d-flex p-3">
+            <div class="gbr-berita me-3">
+                <img src="./assets/logo.jpg" alt="Logo berita" class="img-fluid">
+            </div>
+            <div class="info-berita">
+                <h5>Judul</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
         </div>
-        <div class="p-lg-3 p-1 satker">
-            <div class="satker border shadow py-3 rounded-3">
-                <div class="d-flex justify-content-center">
-                    <img src="./assets/logo.png" alt="logo" class="img-fluid">
-                </div>
-                <div class="d-flex justify-content-center">
-                    <small class="m-0 p-0">PROPAM</small>
-                </div>
+        <div class="berita border shadow rounded-3 d-flex p-3">
+            <div class="gbr-berita me-3">
+                <img src="./assets/logo.jpg" alt="Logo berita" class="img-fluid">
+            </div>
+            <div class="info-berita">
+                <h5>Judul</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
         </div>
-        <div class="p-lg-3 p-1 satker">
-            <div class="satker border shadow py-3 rounded-3">
-                <div class="d-flex justify-content-center">
-                    <img src="./assets/logo.png" alt="logo" class="img-fluid">
-                </div>
-                <div class="d-flex justify-content-center">
-                    <small class="m-0 p-0">HUMAS</small>
-                </div>
+        <div class="berita border shadow rounded-3 d-flex p-3">
+            <div class="gbr-berita me-3">
+                <img src="./assets/logo.jpg" alt="Logo berita" class="img-fluid">
             </div>
-        </div>
-        <div class="p-lg-3 p-1 satker">
-            <div class="satker border shadow py-3 rounded-3">
-                <div class="d-flex justify-content-center">
-                    <img src="./assets/logo.png" alt="logo" class="img-fluid">
-                </div>
-                <div class="d-flex justify-content-center">
-                    <small class="m-0 p-0">SDM</small>
-                </div>
-            </div>
-        </div>
-        <div class="p-lg-3 p-1 satker">
-            <div class="satker border shadow py-3 rounded-3">
-                <div class="d-flex justify-content-center">
-                    <img src="./assets/logo.png" alt="logo" class="img-fluid">
-                </div>
-                <div class="d-flex justify-content-center">
-                    <small class="m-0 p-0">PROPAM</small>
-                </div>
+            <div class="info-berita">
+                <h5>Judul</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
         </div>
     </main>
@@ -168,13 +153,13 @@
                         <small>Home</small>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="./satker.html" class="footer-nav-link">
                         <i class='bx bx-group'></i>
                         <small>Satker</small>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="./berita.html" class="footer-nav-link">
                         <i class='bx bx-news'></i>
                         <small>Berita</small>

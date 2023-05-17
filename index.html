@@ -26,26 +26,28 @@
         .semua-satker .satker {
             flex-basis: 25%;
         }
-        li {            
+        footer li {            
             transition: all .55s ease;
         }
-        li:hover {
+        footer li:hover {
             border-bottom: 5px solid rgb(136, 211, 236);
         }
-        li.active {
+        footer li.active {
             border-bottom: 5px solid rgb(1, 191, 255);
         }
-        .nav-link {
+        .footer-nav-link {
             display: flex;
             flex-direction: column;
             align-items: center;
             color: white;
+            text-decoration: none;
         }
-        .nav-link:hover {
+        .footer-nav-link:hover {
             color: whitesmoke;
         }
         footer { display: none; }
         @media (max-width: 660px) {
+            .header-nav { display: none; }
             .semua-satker .satker {
                 flex-basis: 33%;
             }
@@ -63,11 +65,40 @@
 <body>
     
     <header class="navbar navbar-dark bg-secondary">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex align-items-center">
           <a class="navbar-brand d-flex align-items-center" href="#">
             <img src="./assets/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
             <p class="d-inline m-0 p-0 ms-4">Header</p>
-          </a>
+          </a>          
+          <div class="w-50 m-0 header-nav">
+            <ul class="d-flex list-unstyled ms-auto text-white justify-content-around m-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./">
+                        <p class="m-0">Home</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./satker.html">
+                        <p class="m-0">Satker</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./berita.html">
+                        <p class="m-0">Berita</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./layanan.html">
+                        <p class="m-0">Layanan</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./profile.html">
+                        <p class="m-0">Profile</p>
+                    </a>
+                </li>
+            </ul>
+          </div>
         </div>
     </header>
     <!-- <main class="container"> -->
@@ -145,60 +176,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="row">
-                    <div class="col-lg-3 col-4 p-lg-3 p-1">
-                        <div class="satker border shadow py-3 rounded-3">
-                            <div class="d-flex justify-content-center">
-                                <img src="./assets/logo.png" alt="logo" class="img-fluid">
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <small class="m-0 p-0">SIKUM</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-4 p-lg-3 p-1">
-                        <div class="satker border shadow py-3 rounded-3">
-                            <div class="d-flex justify-content-center">
-                                <img src="./assets/logo.png" alt="logo" class="img-fluid">
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <small class="m-0 p-0">DAFTAR BUKU</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-4 p-lg-3 p-1">
-                        <div class="satker border shadow py-3 rounded-3">
-                            <div class="d-flex justify-content-center">
-                                <img src="./assets/logo.png" alt="logo" class="img-fluid">
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <small class="m-0 p-0">ANTRIAN BUKU</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-4 p-lg-3 p-1">
-                        <div class="satker border shadow py-3 rounded-3">
-                            <div class="d-flex justify-content-center">
-                                <img src="./assets/logo.png" alt="logo" class="img-fluid">
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <small class="m-0 p-0">PEMINJAMAN BUKU</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-4 p-lg-3 p-1">
-                        <div class="satker border shadow py-3 rounded-3">
-                            <div class="d-flex justify-content-center">
-                                <img src="./assets/logo.png" alt="logo" class="img-fluid">
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <small class="m-0 p-0">PENGUMUMAN</small>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+                                    
             </div>    
         </section>
         
@@ -258,31 +236,31 @@
         <nav class="w-100">
             <ul class="list-unstyled d-flex w-100 justify-content-around my-3">
                 <li class="active">
-                    <a href="#" class="nav-link">
+                    <a href="./" class="footer-nav-link">
                         <i class='bx bx-home'></i>
                         <small>Home</small>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link">
+                    <a href="./satker.html" class="footer-nav-link">
                         <i class='bx bx-group'></i>
                         <small>Satker</small>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link">
+                    <a href="./berita.html" class="footer-nav-link">
                         <i class='bx bx-news'></i>
                         <small>Berita</small>
                     </a>
                 </li>                
                 <li>
-                    <a href="#" class="nav-link">
+                    <a href="./layanan.html" class="footer-nav-link">
                         <i class='bx bxs-dashboard'></i>
                         <small>Layanan</small>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link">
+                    <a href="./profile.html" class="footer-nav-link">
                         <i class='bx bxs-user'></i>
                         <small>Profile</small>
                     </a>
