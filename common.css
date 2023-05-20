@@ -7,6 +7,9 @@
 .bg-edark {
     background-color: #1b1e23;
 }
+.text-edark {
+    color: #1b1e23;
+}
 
 /* Header Navbar Section */
 .nav-link, .nav-link:hover { color: white; }

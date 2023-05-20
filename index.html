@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./common.css">
-    <style>        
+    <style>   
         #hero {
             min-height: 40vh;
         }
@@ -48,18 +48,33 @@
             overflow: hidden;
             text-overflow: ellipsis;
         } */
-        .satker, .layanan, .berita { cursor: pointer; }
+        .satker, .layanan, .berita { cursor: pointer; }            
         .slick-prev:before {
             color: #1b1e1b;
             position: relative;
-            left: 10px;
+            left: 20px;
         }
         .slick-next:before {
             color: #1b1e1b;
             position: relative;
             right: 20px;
         }
-        
+        .slick-track {
+            display: flex;
+        }
+
+        .slick-track .slick-slide {
+            display: flex;
+            height: auto;
+        }
+        .slick-slide { width: 100%; }
+        .slick-slide img {
+            /* height: 50% !important; */
+            width: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
         .judul-berita, .tanggal-berita, .isi-berita {
             min-width: 90%;
             max-width: 90%;
@@ -93,7 +108,7 @@
             <img src="./assets/blogo.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
             <p class="d-inline m-0 p-0 ms-4">POLRES SUBANG</p>
           </a>          
-          <div class="w-50 m-0 header-nav">
+          <nav class="w-50 m-0 header-nav">
             <ul class="d-flex list-unstyled ms-auto text-white justify-content-around m-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="./">
@@ -121,10 +136,11 @@
                     </a>
                 </li>
             </ul>
-          </div>
+          </nav>
         </div>
     </header>
     
+    <main class="container-fluid">
         <section id="hero">            
             <div class="row text-dark hero-img">
                 <div class="col-12 d-flex flex-column align-items-center">
@@ -140,7 +156,7 @@
             </div>
         </section>
         
-        <section id="layanan" class="mb-4">
+        <section id="layanan" class="my-5">
             <div class="container">
                 <div class="row mt-3">
                     <h4 class="m-0">Layanan Kami</h4>
@@ -193,48 +209,48 @@
         <section id="satker-news" class="container">
             <div class="row">
                 <!-- Section Satker -->
-                <div class="col-lg-8">
+                <div class="col-lg-8 mb-3">
                     <div class="row m-0">
                         <h4 class="m-0">Satuan Kerja</h4>
                     </div>
                     <div class="row semua-satker m-0">
-                        <div class="p-lg-3 p-1 satker">
-                            <div class="satker border shadow py-3 rounded-3">
-                                <div class="d-flex justify-content-center px-3 pb-3">
-                                    <img src="./assets/korps_sabhara.jpg" alt="logo" class="img-fluid satker-img w-75">
+                        <div class="p-lg-3 p-1">
+                            <div class="border shadow py-3 rounded-3 satker">
+                                <div class="d-flex justify-content-center px-3 pb-3 h-75">
+                                    <img src="./assets/korps_sabhara.jpg" alt="logo" class="img-fluid satker-img w-100">
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                    <h6 class="m-0 px-2">HUMAS</h6>
+                                    <h6 class="m-0 px-2 text-center satker-name">Lorem ipsum dolor sit amet.</h6>
                                 </div>
                             </div>
                         </div>
-                        <div class="p-lg-3 p-1 satker">
-                            <div class="satker border shadow py-3 rounded-3">
-                                <div class="d-flex justify-content-center px-3 pb-3">
-                                    <img src="./assets/logistik.png" alt="logo" class="img-fluid satker-img w-75">
+                        <div class="p-lg-3 p-1">
+                            <div class="border shadow py-3 rounded-3 satker">
+                                <div class="d-flex justify-content-center px-3 pb-3 h-75">
+                                    <img src="./assets/logistik.png" alt="logo" class="img-fluid satker-img w-100">
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                    <h6 class="m-0 px-2">HUMAS</h6>
+                                    <h6 class="m-0 px-2 text-center satker-name">HUMAS</h6>
                                 </div>
                             </div>
                         </div>
-                        <div class="p-lg-3 p-1 satker">
-                            <div class="satker border shadow py-3 rounded-3">
-                                <div class="d-flex justify-content-center px-3 pb-3">
-                                    <img src="./assets/logo.jpg" alt="logo" class="img-fluid satker-img w-75">
+                        <div class="p-lg-3 p-1">
+                            <div class="border shadow py-3 rounded-3 satker">
+                                <div class="d-flex justify-content-center px-3 pb-3 h-75">
+                                    <img src="./assets/logo.jpg" alt="logo" class="img-fluid satker-img w-100">
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                    <h6 class="m-0 px-2">HUMAS</h6>
+                                    <h6 class="m-0 px-2 text-center satker-name">HUMAS</h6>
                                 </div>
                             </div>
                         </div>
-                        <div class="p-lg-3 p-1 satker">
-                            <div class="satker border shadow py-3 rounded-3">
-                                <div class="d-flex justify-content-center px-3 pb-3">
-                                    <img src="./assets/korps_sabhara.jpg" alt="logo" class="img-fluid satker-img w-75">
+                        <div class="p-lg-3 p-1">
+                            <div class="border shadow py-3 rounded-3 satker">
+                                <div class="d-flex justify-content-center px-3 pb-3 h-75">
+                                    <img src="./assets/korps_sabhara.jpg" alt="logo" class="img-fluid satker-img w-100">
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                    <h6 class="m-0 px-2">HUMAS</h6>
+                                    <h6 class="m-0 px-2 text-center satker-name">HUMAS</h6>
                                 </div>
                             </div>
                         </div>
@@ -288,6 +304,7 @@
                 </div>
             </div>
         </section>
+    </main>
 
     <footer class="w-100 bg-edark ">
         <nav class="w-100">
@@ -341,14 +358,14 @@
             dots: true,
             infinite: false,
             speed: 300,
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 4,
+            slidesToScroll: 4,
             responsive: [
                 {
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
+                        slidesToShow: 4,
+                        slidesToScroll: 4,
                         infinite: true,
                         dots: true
                     }
@@ -356,8 +373,8 @@
                 {
                     breakpoint: 600,
                     settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToShow: 3,
+                        slidesToScroll: 3
                     }
                 },
                 {

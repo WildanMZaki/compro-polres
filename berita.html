@@ -19,28 +19,81 @@
 
     <link rel="stylesheet" href="./common.css">
     <style>
-        .semua-berita {
-            display: flex;
-            width: 100%;
-            flex-wrap: wrap;
-            justify-content: space-around;
+        .berita { cursor: pointer; }
+        .berita:hover .judul-berita {
+            border-bottom: solid 3px orange;
         }
-        .semua-berita .berita {
-            flex-basis: 23%;
-            cursor: pointer;
-        }
-        .gbr-berita {
-            flex-basis: 25%;
-        }
-        .info-berita {
-            flex-basis: 75%;
-        }
-        @media (max-width: 660px) {  
-            main.semua-berita {
-                margin-bottom: 100px;
+        @media (min-width: 1000px) {  
+            .berita {
+                width: 23% !important;
+                height: 60vh;
             }
-            .semua-berita .berita {
-                flex-basis: 100%;
+            .gambar-berita {
+                width: 100% !important;
+                max-height: 50%;                                
+                min-height: 50%;                                
+            }
+            .gambar-berita img {
+                max-width: 100%;
+                max-height: 100%;
+                overflow: hidden;
+                object-fit: scale-down;
+                object-position: 20% 10%;
+            }
+            .info-berita {
+                width: 100% !important;
+                max-height: 50%;                                
+                min-height: 50%;   
+                overflow: hidden;
+                text-overflow: ellipsis;            
+            }
+            .judul-berita {                
+                font-size: 1.5rem;
+                min-width: 85%;
+                max-width: 85%;                
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+        @media (max-width: 1000px) {
+            .berita {
+                width: 45% !important;
+            }
+            .gambar-berita {
+                width: 25% !important;
+                height: 100%;                
+            }
+            .info-berita {
+                width: 75% !important;
+            }
+            .judul-berita, .tanggal-berita, .isi-berita {
+                min-width: 90%;
+                max-width: 90%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        } 
+        @media (max-width: 767px) {  
+            .berita {
+                width: 95% !important;
+            }
+            .gambar-berita {
+                width: 25% !important;
+                height: 100%;                
+            }
+            .info-berita {
+                width: 75% !important;
+            }
+            .judul-berita, .tanggal-berita, .isi-berita {
+                min-width: 90%;
+                max-width: 90%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            main {
+                margin-bottom: 100px;
             }
         }
     </style>
@@ -53,7 +106,7 @@
             <img src="./assets/blogo.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
             <p class="d-inline m-0 p-0 ms-4">POLRES SUBANG</p>
           </a>          
-          <div class="w-50 m-0 header-nav">
+          <nav class="w-50 m-0 header-nav">
             <ul class="d-flex list-unstyled ms-auto text-white justify-content-around m-0">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="./">
@@ -81,46 +134,92 @@
                     </a>
                 </li>
             </ul>
-          </div>
+          </nav>
         </div>
-    </header>
+    </header>   
 
-    <main class="container semua-berita mt-3">
-        <div class="berita border shadow rounded-3 d-flex p-3 my-lg-0 my-2">
-            <div class="gbr-berita me-3">
-                <img src="./assets/logo.jpg" alt="Logo berita" class="img-fluid">
+    <main class="container">
+        <div class="row align-items-center mt-5">
+            <div class="col-lg-6 mb-3">
+                <h4>Berita</h4>
             </div>
-            <div class="info-berita">
-                <h5>Judul</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-        </div>
-        <div class="berita border shadow rounded-3 d-flex p-3 my-lg-0 my-2">
-            <div class="gbr-berita me-3">
-                <img src="./assets/logo.jpg" alt="Logo berita" class="img-fluid">
-            </div>
-            <div class="info-berita">
-                <h5>Judul</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-        </div>
-        <div class="berita border shadow rounded-3 d-flex p-3 my-lg-0 my-2">
-            <div class="gbr-berita me-3">
-                <img src="./assets/logo.jpg" alt="Logo berita" class="img-fluid">
-            </div>
-            <div class="info-berita">
-                <h5>Judul</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="col-lg-6 mb-3 d-flex align-items-center">
+                <select class="form-select form-select-lg py-1 w-25 me-2" aria-label=".form-select-lg example">
+                    <option selected disabled class="fs-6">Sort By</option>
+                    <option value="date">Date</option>
+                    <option value="visitor">Visitor</option>
+                    <option value="title">Title</option>
+                </select> 
+                <div class="input-group m-0">
+                    <input type="text" class="form-control" placeholder="Cari satuan kerja" aria-label="Cari satuan kerja" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" title="Cari"><i class="bx bx-search-alt-2"></i></button>
+                  </div>
             </div>
         </div>
-        <div class="berita border shadow rounded-3 d-flex p-3 my-lg-0 my-2">
-            <div class="gbr-berita me-3">
-                <img src="./assets/logo.jpg" alt="Logo berita" class="img-fluid">
-            </div>
-            <div class="info-berita">
-                <h5>Judul</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
+        <div class="row">
+            <div class="semua-berita w-100 d-flex flex-lg-row flex-md-row flex-column justify-content-lg-start justify-content-md-start justify-content-center align-items-center mt-4 flex-lg-wrap flex-md-wrap">
+                <div class="berita d-flex flex-lg-column border p-2 mb-lg-4 mb-3 mx-2 shadow rounded-1">
+                    <div class="gambar-berita p-lg-2 pe-2 text-center">
+                        <img src="./assets/logo.jpg" alt="Gambar Berita" class="img-fluid">
+                    </div>
+                    <div class="info-berita p-lg-2 d-flex flex-column justify-content-start">
+                        <h6 class="m-0 judul-berita">Ini judul berita Lorem ipsum dolor sit amet.</h6>
+                        <small class="tanggal-berita my-2">
+                            <i class="bx bx-calendar"></i>19 Mei 2023
+                        </small>
+                        <small class="isi-berita">Lorem ipsum dolor Lorem Lorem, ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ex doloreloremm, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. At pariatur provident rem, tempora atque accusamus a dolores aut, ab, necessitatibus eius aspernatur quia officiis! Dolores vero iure cupiditate culpa doloremque? Sint architecto incidunt numquam aliquid ratione quo vitae aspernatur quos sed neque, dicta eius, exercitationem quis totam iure facere natus aliquam fugit. architecto suscipit mollitia nobis dicta perferendis vero sunt facilis odio! Dolor enim aliquid, sunt ducimus modi unde facilis asperiores? </small>
+                    </div>
+                </div>
+                <div class="berita d-flex flex-lg-column border p-2 mb-lg-4 mb-3 mx-2 shadow rounded-1">
+                    <div class="gambar-berita p-lg-2 pe-2 text-center">
+                        <img src="./assets/blogo.png" alt="Gambar Berita" class="img-fluid">
+                    </div>
+                    <div class="info-berita px-lg-2 pb-lg-2 pt-lg-0 d-flex flex-column justify-content-start">
+                        <h6 class="m-0 judul-berita">Ini judul berita</h6>
+                        <small class="tanggal-berita my-2">
+                            <i class="bx bx-calendar"></i>19 Mei 2023
+                        </small>
+                        <small class="isi-berita">Lorem ipsum dolor Lorem Lorem, ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta porro repellat, asperiores doloribus ullam, itaque hic dolorum eligendi doloremque distinctio dicta sequi cupiditate expedita id officia totam enim! Aperiam, asperiores?</small>
+                    </div>
+                </div>
+                <div class="berita d-flex flex-lg-column border p-2 mb-lg-4 mb-3 mx-2 shadow rounded-1">
+                    <div class="gambar-berita p-lg-2 pe-2 text-center">
+                        <img src="./assets/korps_sabhara.jpg" alt="Gambar Berita" class="img-fluid">
+                    </div>
+                    <div class="info-berita px-lg-2 pb-lg-2 pt-lg-0 d-flex flex-column">
+                        <h6 class="m-0 judul-berita">Ini judul berita</h6>
+                        <small class="tanggal-berita my-2">
+                            <i class="bx bx-calendar"></i>19 Mei 2023
+                        </small>
+                        <small class="isi-berita">Lorem ipsum dolor Lorem Lorem, ipsum dolor </small>
+                    </div>
+                </div>
+                <div class="berita d-flex flex-lg-column border p-2 mb-lg-4 mb-3 mx-2 shadow rounded-1">
+                    <div class="gambar-berita p-lg-2 pe-2 text-center">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhSiGigoi2IoLRHbWjFn1epVd6im1T5vIEEFC7u6SphiIDH8BjH2S_QZecXTf5bnjiva5p9Fy8U5KAH8FqO3oHL8AoksCpORUvHKZPA90yMnAsrf8wbF80WvSge26i9m1jR_dHTzjnVhocDdLY3dowA2QNrA6h7lZftpXYxiYRz2s1UlZVoL7zE3uJ-/s16000/Fotografi%20Landscape.jpg" alt="Gambar Berita" class="img-fluid">
+                    </div>
+                    <div class="info-berita px-lg-2 pb-lg-2 pt-lg-0 d-flex flex-column">
+                        <h6 class="m-0 judul-berita">Ini judul berita</h6>
+                        <small class="tanggal-berita my-2">
+                            <i class="bx bx-calendar"></i>19 Mei 2023
+                        </small>
+                        <small class="isi-berita">Lorem ipsum dolor Lorem Lorem, ipsum dolor </small>
+                    </div>
+                </div>
+                <div class="berita d-flex flex-lg-column border p-2 mb-lg-4 mb-3 mx-2 shadow rounded-1">
+                    <div class="gambar-berita p-lg-2 pe-2 text-center">
+                        <img src="" alt="Gambar Berita" class="img-fluid">
+                    </div>
+                    <div class="info-berita px-lg-2 pb-lg-2 pt-lg-0 d-flex flex-column">
+                        <h6 class="m-0 judul-berita">Ini judul berita</h6>
+                        <small class="tanggal-berita my-2">
+                            <i class="bx bx-calendar"></i>19 Mei 2023
+                        </small>
+                        <small class="isi-berita">Lorem ipsum dolor Lorem Lorem, ipsum dolor </small>
+                    </div>
+                </div>
+                
+            </div>  
         </div>
     </main>
 

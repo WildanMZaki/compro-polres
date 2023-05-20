@@ -19,8 +19,9 @@
 
     <link rel="stylesheet" href="./common.css">
     <style>
-        #profilePhoto { width: 25%; }
+        #profilePhoto { width: 200px; height: 200px; }
         @media (max-width: 660px) {
+            #profilePhoto { width: 35%; height: auto; }
             main.myProfile {
                 margin-bottom: 100px;
             }
@@ -35,7 +36,7 @@
             <img src="./assets/blogo.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
             <p class="d-inline m-0 p-0 ms-4">POLRES SUBANG</p>
           </a>          
-          <div class="w-50 m-0 header-nav">
+          <nav class="w-50 m-0 header-nav">
             <ul class="d-flex list-unstyled ms-auto text-white justify-content-around m-0">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="./">
@@ -63,37 +64,43 @@
                     </a>
                 </li>
             </ul>
-          </div>
+          </nav>
         </div>
     </header>
 
     <main class="container myProfile mt-3">
-        <section class="row profile justify-content-center">
-            <img src="./assets/anonim.jpg" alt="Profile Photo" id="profilePhoto" class="img-fluid border m-0 p-0 border-secondary border-2 rounded-circle">
-        </section>
-        <section id="biodata" class="row my-3">
-            <div class="col-10 offset-1">
-                <div class="border-bottom mb-3">
-                    <h4 class="fw-bold">Nama:</h4>
-                    <h5>Wildan M Zaki</h5>
+        <div class="row my-4 mx-lg-5 mx-2 py-4 px-3 border border-4 rounded-1 shadow">
+            <section class="row mb-4">
+                <section class="col-lg-4 offset-lg-1 picture d-flex justify-content-center">
+                    <img src="./assets/anonim.jpg" alt="Profile Photo" id="profilePhoto" class="img-fluid border m-0 p-0 border-secondary border-2 rounded-circle">
+                </section>
+                <section class="col-lg-5 ">
+                    <div class="border-bottom border-1 mb-3">
+                        <h6 class="fw-bold">Nama:</h6>
+                        <p class="m-0">Wildan M Zaki</p>
+                    </div>
+                    <div class="border-bottom border-1 mb-3">
+                        <h6 class="fw-bold">Email:</h6>
+                        <p class="m-0">wildanmzaki7@gmail.com</p>
+                    </div>
+                    <div class="border-bottom border-1 mb-3">
+                        <h6 class="fw-bold">No. Telepon:</h6>
+                        <p class="m-0">081234567890</p>
+                    </div>
+                </section>
+            </section>
+            <section class="row">
+                <div class="col-10 offset-1 d-flex justify-content-center align-items-center">
+                    <a href="./edit.html" class="text-decoration-none me-3">
+                        <button type="button" class="btn btn-outline-dark">Edit</button>
+                    </a>
+                    <a href="./logout.html" class="text-decoration-none">
+                        <button type="button" class="btn btn-danger">Logout</button>
+                    </a>
                 </div>
-                <div class="border-bottom mb-3">
-                    <h4 class="fw-bold">Email:</h4>
-                    <h5>wildanmzaki7@gmail.com</h5>
-                </div>
-                <div class="border-bottom mb-3">
-                    <h4 class="fw-bold">No. Telepon:</h4>
-                    <h5>081234567890</h5>
-                </div>
-            </div>
-        </section>
-        <section class="row">
-            <div class="col-10 offset-1">
-                <a href="./edit.html">
-                    <button type="button" class="btn btn-secondary">Edit</button>
-                </a>
-            </div>
-        </section>
+            </section>
+        </div>
+        
     </main>
 
     <footer class="w-100 bg-edark">

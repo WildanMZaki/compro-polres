@@ -5,17 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baca Berita</title>
+    <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Bootstrap -->
     <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./common.css">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        .nav-link, .nav-link:hover { color: white; }  
-        #gbrBerita { width: 45%; }  
+        #news-main-img img { width: 45%; }  
         @media (max-width: 660px) {
             .header-nav { display: none; }                                
             main.berita {
@@ -26,25 +31,45 @@
 </head>
 <body>
     
-    <header class="navbar navbar-dark bg-secondary">
+    <header class="navbar navbar-dark bg-edark py-3">
         <div class="container-fluid d-flex align-items-center justify-content-between">
-            <a href="./berita.html">
-                <button type="button" class="btn btn-info"><i class="bx bx-arrow-back"> Back</i></button>
+            <a href="./berita.html" title="Back" class="text-decoration-none text-white">
+                <i class="bx bx-arrow-back fs-3"></i>
             </a>
-            <p class="d-inline text-white m-0 fs-5">Judul</p>
-            <button type="button" class="btn btn-secondary text-secondary disabled" disabled><i class="bx bx-arrow-back"> Back</i></button>
+            <p class="d-inline text-white m-0 fs-5">Judul Berita</p>
+            <i class="bx bx-arrow-back fs-3 bg-edark text-edark"></i>
         </div>
     </header>
-
-    <main class="container berita mt-3">
-        <section class="row justify-content-center mb-3">
-            <img src="./assets/logo.jpg" alt="Logo" class="img-fluid" id="gbrBerita">
+    
+    <main class="container">
+        <section class="row my-3">
+            <div class="col-lg-10 offset-lg-1">
+                <div id="news-main-img" class="d-flex justify-content-center">
+                    <img src="./assets/logo.jpg" alt="Gambar Utama Berita" class="">
+                </div>
+            </div>            
         </section>
-        <section>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
+        <section class="row my-3">
+            <div class="col-lg-10 offset-lg-1">
+                <h1>Headline Berita Lorem, ipsum dolor.</h1>
+                <small><i class="bx bx-calendar"></i> 20 Mei 2022</small>
+            </div>
+        </section>
+        <section class="row my-3">
+            <div class="col-lg-10 offset-lg-1">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
+            </div>
+        </section>
+        <section class="row my-5">
+            <div class="col-lg-10 offset-lg-1">
+                <h4>Berita Lainnya:</h4>
+                <div class="other-news">
+                    
+                </div>
+            </div>
         </section>
     </main>
 
