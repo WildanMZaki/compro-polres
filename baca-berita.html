@@ -37,7 +37,7 @@
         }
         .comment-actions i, .comment-actions small { cursor: pointer; }
         @media (max-width: 660px) {
-            #news-main-img img { height: 40vh; }  
+            #news-main-img img { height: 20vh; }  
             .commentator-photo {
                 flex-basis: 40%;
             }
@@ -64,21 +64,18 @@
             <div class="col-lg-8">
                 <!-- Headline dan tanggal -->
                 <section class="mb-3 text-center">
-                    <h1>Headline Berita Lorem, ipsum dolor.</h1>
-                    <small><i class="bx bx-calendar"></i> 20 Mei 2022</small>
+                    <h1 id="judulBerita"></h1>
+                    <small><i class="bx bx-calendar"></i> <span id="tanggalBerita"></span></small>
                 </section>
                 <!-- Foto -->
                 <section class="mb-3">
                     <div id="news-main-img" class="d-flex justify-content-center">
-                        <img src="./assets/logo.jpg" alt="Gambar Utama Berita" class="">
+                        <img src="./assets/logo.jpg" alt="Gambar Utama Berita" class="" id="gambarBerita">
                     </div>
                 </section>
                 <!-- Isi Berita -->
-                <section class="mb-3">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
+                <section class="mb-3" id="contentBerita">
+                    
                 </section>
                 <!-- Kirim komentar -->
                 <section class="mb-3 bg-light p-3 rounded-3">
@@ -106,15 +103,15 @@
                             <img src="./assets/anonim.jpg" alt="FK" class="img-fluid rounded-circle">
                         </div>
                         <div class="comment">
-                            <p class="fw-bold m-0">Nama Komentator</p>
-                            <small class="text-muted">10 jam yang lalu</small>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea similique mollitia praesentium illo autem. Dicta accusantium aspernatur optio, magnam eum nostrum perferendis officiis? Aliquid, iure quisquam numquam autem facere libero!</p>
+                            <p class="fw-bold m-0">Andi Maulana</p>
+                            <small class="text-muted">1 jam yang lalu</small>
+                            <p>Keren...</p>
                             <div class="d-flex align-items-center comment-actions">
                                 <span class="me-2">
-                                    <i class="bx bx-like me-2"></i><span>3</span>
+                                    <i class="bx bx-like me-2"></i><span>8</span>
                                 </span>
                                 <span class="me-4">
-                                    <i class="bx bx-dislike me-2"></i><span>1</span>
+                                    <i class="bx bx-dislike me-2"></i><span></span>
                                 </span>
                                 <span>
                                     <small class="text-muted">Balas</small>
@@ -127,15 +124,15 @@
                             <img src="./assets/anonim.jpg" alt="FK" class="img-fluid rounded-circle">
                         </div>
                         <div class="comment">
-                            <p class="fw-bold m-0">Nama Komentator</p>
+                            <p class="fw-bold m-0">Indra Anderson</p>
                             <small class="text-muted">10 jam yang lalu</small>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea similique mollitia praesentium illo autem. Dicta accusantium aspernatur optio, magnam eum nostrum perferendis officiis? Aliquid, iure quisquam numquam autem facere libero!</p>
+                            <p>Keren banget, fix cita-cita saya jadi polisi</p>
                             <div class="d-flex align-items-center">
                                 <span class="me-2">
-                                    <i class="bx bx-like me-2"></i><span>3</span>
+                                    <i class="bx bx-like me-2"></i><span>10</span>
                                 </span>
                                 <span class="me-4">
-                                    <i class="bx bx-dislike me-2"></i><span>1</span>
+                                    <i class="bx bx-dislike me-2"></i><span></span>
                                 </span>
                                 <span>
                                     <small class="text-muted">Balas</small>
@@ -149,54 +146,7 @@
                 <section>
                     <h4>Baca juga:</h4>
                     <div class="w-100 d-flex flex-column berita-lainnya">
-                        <div class="berita d-flex border p-2 mb-3">
-                            <div class="gambar-berita w-25 pe-2">
-                                <img src="./assets/logo.jpg" alt="Gambar Berita" class="img-fluid">
-                            </div>
-                            <div class="info-berita w-75 d-flex flex-column">
-                                <h6 class="m-0 judul-berita">Ini judul berita</h6>
-                                <small class="tanggal-berita my-2">
-                                    <i class="bx bx-calendar"></i>19 Mei 2023
-                                </small>
-                                <small class="isi-berita">Lorem ipsum dolor Lorem Lorem, ipsum dolor </small>
-                            </div>
-                        </div>
-                        <div class="berita d-flex border p-2 mb-3">
-                            <div class="gambar-berita w-25 pe-2">
-                                <img src="./assets/blogo.png" alt="Gambar Berita" class="img-fluid">
-                            </div>
-                            <div class="info-berita w-75 d-flex flex-column">
-                                <h6 class="m-0 judul-berita">Ini judul berita</h6>
-                                <small class="tanggal-berita my-2">
-                                    <i class="bx bx-calendar"></i>19 Mei 2023
-                                </small>
-                                <small class="isi-berita">text panjang Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dicta magnam rem fugit alias iste tempore minus accusamus labore dolorum reprehenderit est ut, tenetur ipsum magni officia aperiam cum omnis. </small>
-                            </div>
-                        </div>
-                        <div class="berita d-flex border p-2 mb-3">
-                            <div class="gambar-berita w-25 pe-2">
-                                <img src="https://jsp.co.id/wp-content/uploads/2018/12/fotografi-karya-alumni-jakarta-school-of-photography.jpg" alt="Gambar Berita" class="img-fluid">
-                            </div>
-                            <div class="info-berita w-75 d-flex flex-column">
-                                <h6 class="m-0 judul-berita">Ini judul berita</h6>
-                                <small class="tanggal-berita my-2">
-                                    <i class="bx bx-calendar"></i>19 Mei 2023
-                                </small>
-                                <small class="isi-berita">Lorem ipsum dolor Lorem Lorem, ipsum dolor </small>
-                            </div>
-                        </div>
-                        <div class="berita d-flex border p-2 mb-3">
-                            <div class="gambar-berita w-25 pe-2">
-                                <img src="./assets/korps_sabhara.jpg" alt="Gambar Berita" class="img-fluid">
-                            </div>
-                            <div class="info-berita w-75 d-flex flex-column">
-                                <h6 class="m-0 judul-berita">Ini judul berita</h6>
-                                <small class="tanggal-berita my-2">
-                                    <i class="bx bx-calendar"></i>19 Mei 2023
-                                </small>
-                                <small class="isi-berita">Lorem ipsum dolor Lorem Lorem, ipsum dolor </small>
-                            </div>
-                        </div>
+                        
                     </div>       
                 </section>                                            
             </div>
@@ -205,5 +155,53 @@
 
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script>
+        const url = document.URL;
+        const id = url.slice(url.search('#')+1);
+
+        function getData(url, callback) {
+            $.get(
+                url, data => callback(data)
+            );
+        }
+
+        function init() {            
+            getData("./news.json", data => {
+                const berita = data.filter(news => news.id == id)[0];
+                console.log(berita);
+                
+                $('#judulBerita').html(berita.title);
+                $('#tanggalBerita').html(berita.date);
+                $('#gambarBerita').attr('src', `./assets/${berita.gambar}`);
+                berita.content.forEach(p => {
+                    $('#contentBerita').append(`<p>${p}</p>`);
+                });
+            });            
+        }
+        init();
+
+        function showNews() {            
+            getData("./news.json", data => {
+                data.forEach(berita => {
+                    $('.berita-lainnya').append(`
+                        <div class="berita d-flex border p-2 mb-3" onclick="location.href = './baca-berita.html#${berita.id}'">
+                            <div class="gambar-berita w-25 pe-2">
+                                <img src="./assets/${berita.gambar}" alt="Gambar Berita" class="img-fluid">
+                            </div>
+                            <div class="info-berita w-75 d-flex flex-column">
+                                <h6 class="m-0 judul-berita">${berita.title}</h6>
+                                <small class="tanggal-berita my-2">
+                                    <i class="bx bx-calendar"></i>${berita.date}
+                                </small>
+                                <small class="isi-berita">${berita.content[0]}</small>
+                            </div>
+                        </div>
+                    `);
+                });
+            });            
+        }
+        showNews();
+    </script>
 </body>
 </html>
