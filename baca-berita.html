@@ -20,10 +20,27 @@
     <link rel="stylesheet" href="./common.css">
 
     <style>
-        #news-main-img img { width: 45%; }  
+        #news-main-img img { height: 50vh; }  
+        .berita { cursor: pointer; }
+        .berita:hover .judul-berita {
+            border-bottom: solid 3px orange;
+        }
+        .judul-berita, .tanggal-berita, .isi-berita {
+            min-width: 90%;
+            max-width: 90%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .commentator-photo {
+            flex-basis: 25%;
+        }
         @media (max-width: 660px) {
-            .header-nav { display: none; }                                
-            main.berita {
+            #news-main-img img { height: 40vh; }  
+            .commentator-photo {
+                flex-basis: 40%;
+            }
+            main {
                 margin-bottom: 80px;
             }
         }
@@ -36,41 +53,153 @@
             <a href="./berita.html" title="Back" class="text-decoration-none text-white">
                 <i class="bx bx-arrow-back fs-3"></i>
             </a>
-            <p class="d-inline text-white m-0 fs-5">Judul Berita</p>
+            <p class="d-inline text-white m-0 fs-5">Baca Berita</p>
             <i class="bx bx-arrow-back fs-3 bg-edark text-edark"></i>
         </div>
     </header>
     
     <main class="container">
-        <section class="row my-3">
-            <div class="col-lg-10 offset-lg-1">
-                <div id="news-main-img" class="d-flex justify-content-center">
-                    <img src="./assets/logo.jpg" alt="Gambar Utama Berita" class="">
-                </div>
-            </div>            
-        </section>
-        <section class="row my-3">
-            <div class="col-lg-10 offset-lg-1">
-                <h1>Headline Berita Lorem, ipsum dolor.</h1>
-                <small><i class="bx bx-calendar"></i> 20 Mei 2022</small>
+        <div class="row my-lg-5 my-3 px-lg-5">
+            <div class="col-lg-8">
+                <!-- Headline dan tanggal -->
+                <section class="mb-3 text-center">
+                    <h1>Headline Berita Lorem, ipsum dolor.</h1>
+                    <small><i class="bx bx-calendar"></i> 20 Mei 2022</small>
+                </section>
+                <!-- Foto -->
+                <section class="mb-3">
+                    <div id="news-main-img" class="d-flex justify-content-center">
+                        <img src="./assets/logo.jpg" alt="Gambar Utama Berita" class="">
+                    </div>
+                </section>
+                <!-- Isi Berita -->
+                <section class="mb-3">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
+                </section>
+                <!-- Kirim komentar -->
+                <section class="mb-3 bg-light p-3 rounded-3">
+                    <div>
+                        <h4>Komentar:</h4>
+                    </div>
+                    <div class="mb-3">
+                        <form action="" method="post">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <textarea class="form-control" id="comment" rows="3" placeholder="Tuliskan komentar"></textarea>
+                                </div>
+                                <div class="card-footer d-flex justify-content-end">
+                                    <button type="submit" class="btn btn-primary" title="Kirim komentar">Kirim <i class="bx bx-paper-plane"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </section>
+                <!-- Daftar Komentar -->
+                <section class="d-flex flex-column">
+                    <div class="komentar d-flex mb-3 border-bottom py-2">
+                        <div class="commentator-photo pt-2 px-3">
+                            <img src="./assets/anonim.jpg" alt="FK" class="img-fluid rounded-circle">
+                        </div>
+                        <div class="comment">
+                            <p class="fw-bold m-0">Nama Komentator</p>
+                            <small class="text-muted">10 jam yang lalu</small>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea similique mollitia praesentium illo autem. Dicta accusantium aspernatur optio, magnam eum nostrum perferendis officiis? Aliquid, iure quisquam numquam autem facere libero!</p>
+                            <div class="d-flex align-items-center">
+                                <span class="me-2">
+                                    <i class="bx bx-like me-2"></i><span>3</span>
+                                </span>
+                                <span class="me-4">
+                                    <i class="bx bx-dislike me-2"></i><span>1</span>
+                                </span>
+                                <span>
+                                    <small class="text-muted">Balas</small>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="komentar d-flex mb-3 border-bottom py-2">
+                        <div class="commentator-photo pt-2 px-3">
+                            <img src="./assets/anonim.jpg" alt="FK" class="img-fluid rounded-circle">
+                        </div>
+                        <div class="comment">
+                            <p class="fw-bold m-0">Nama Komentator</p>
+                            <small class="text-muted">10 jam yang lalu</small>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea similique mollitia praesentium illo autem. Dicta accusantium aspernatur optio, magnam eum nostrum perferendis officiis? Aliquid, iure quisquam numquam autem facere libero!</p>
+                            <div class="d-flex align-items-center">
+                                <span class="me-2">
+                                    <i class="bx bx-like me-2"></i><span>3</span>
+                                </span>
+                                <span class="me-4">
+                                    <i class="bx bx-dislike me-2"></i><span>1</span>
+                                </span>
+                                <span>
+                                    <small class="text-muted">Balas</small>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
-        <section class="row my-3">
-            <div class="col-lg-10 offset-lg-1">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore, iure itaque nulla quia, quas ullam totam tempora unde a enim libero consequuntur dolores neque excepturi, laudantium aliquam. Rem, dolores.</p>
+            <div class="col-lg-4 px-4 my-3">
+                <section>
+                    <h4>Baca juga:</h4>
+                    <div class="w-100 d-flex flex-column berita-lainnya">
+                        <div class="berita d-flex border p-2 mb-3">
+                            <div class="gambar-berita w-25 pe-2">
+                                <img src="./assets/logo.jpg" alt="Gambar Berita" class="img-fluid">
+                            </div>
+                            <div class="info-berita w-75 d-flex flex-column">
+                                <h6 class="m-0 judul-berita">Ini judul berita</h6>
+                                <small class="tanggal-berita my-2">
+                                    <i class="bx bx-calendar"></i>19 Mei 2023
+                                </small>
+                                <small class="isi-berita">Lorem ipsum dolor Lorem Lorem, ipsum dolor </small>
+                            </div>
+                        </div>
+                        <div class="berita d-flex border p-2 mb-3">
+                            <div class="gambar-berita w-25 pe-2">
+                                <img src="./assets/blogo.png" alt="Gambar Berita" class="img-fluid">
+                            </div>
+                            <div class="info-berita w-75 d-flex flex-column">
+                                <h6 class="m-0 judul-berita">Ini judul berita</h6>
+                                <small class="tanggal-berita my-2">
+                                    <i class="bx bx-calendar"></i>19 Mei 2023
+                                </small>
+                                <small class="isi-berita">text panjang Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dicta magnam rem fugit alias iste tempore minus accusamus labore dolorum reprehenderit est ut, tenetur ipsum magni officia aperiam cum omnis. </small>
+                            </div>
+                        </div>
+                        <div class="berita d-flex border p-2 mb-3">
+                            <div class="gambar-berita w-25 pe-2">
+                                <img src="https://jsp.co.id/wp-content/uploads/2018/12/fotografi-karya-alumni-jakarta-school-of-photography.jpg" alt="Gambar Berita" class="img-fluid">
+                            </div>
+                            <div class="info-berita w-75 d-flex flex-column">
+                                <h6 class="m-0 judul-berita">Ini judul berita</h6>
+                                <small class="tanggal-berita my-2">
+                                    <i class="bx bx-calendar"></i>19 Mei 2023
+                                </small>
+                                <small class="isi-berita">Lorem ipsum dolor Lorem Lorem, ipsum dolor </small>
+                            </div>
+                        </div>
+                        <div class="berita d-flex border p-2 mb-3">
+                            <div class="gambar-berita w-25 pe-2">
+                                <img src="./assets/korps_sabhara.jpg" alt="Gambar Berita" class="img-fluid">
+                            </div>
+                            <div class="info-berita w-75 d-flex flex-column">
+                                <h6 class="m-0 judul-berita">Ini judul berita</h6>
+                                <small class="tanggal-berita my-2">
+                                    <i class="bx bx-calendar"></i>19 Mei 2023
+                                </small>
+                                <small class="isi-berita">Lorem ipsum dolor Lorem Lorem, ipsum dolor </small>
+                            </div>
+                        </div>
+                    </div>       
+                </section>                                            
             </div>
-        </section>
-        <section class="row my-5">
-            <div class="col-lg-10 offset-lg-1">
-                <h4>Berita Lainnya:</h4>
-                <div class="other-news">
-                    
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
